@@ -22,19 +22,13 @@
                 <div>
                     @if (ovm.cart.orderStatus == StaticDefinitions.PendingConfirmation)
                     {
-                        <form asp-action="AcceptOrder" asp-route-id="@ovm.cart.Id" asp-route-restid="@ovm.Restaurant.Id" method="post" style="display:inline">
-                            <button type="submit" class="btn btn-primary">Accept Order</button>
-                        </form>
+                        <a asp-action="AcceptOrder" asp-route-id="@ovm.cart.Id" asp-route-restid="@ovm.Restaurant.Id" class="btn btn-primary">Accept Order</a>
                     }
                     else
                     {
-                        <form asp-action="OrderPrepared" asp-route-id="@ovm.cart.Id" asp-route-restid="@ovm.Restaurant.Id" method="post" style="display:inline">
-                            <button type="submit" class="btn btn-primary">Order Prepared</button>
-                        </form>
+                        <a asp-action="OrderPrepared" asp-route-id="@ovm.cart.Id" asp-route-restid="@ovm.Restaurant.Id" class="btn btn-primary">Order Prepared</a>
                     }
-                    <form asp-action="CancelOrder" asp-route-id="@ovm.cart.Id" asp-route-restid="@ovm.Restaurant.Id" method="post" style="display:inline">
-                        <button type="submit" class="btn btn-danger">Cancel Order</button>
-                    </form>
+                    <a asp-action="CancelOrder" asp-route-id="@ovm.cart.Id" asp-route-restid="@ovm.Restaurant.Id" class="btn btn-danger">Cancel Order</a>
                 </div>
             </div>
             <div id="collapse@(orderIndex)" class="collapse" aria-labelledby="heading@(orderIndex)" data-parent="#ordersAccordion">

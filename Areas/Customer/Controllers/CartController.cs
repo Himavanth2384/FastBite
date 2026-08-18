@@ -176,5 +176,13 @@ namespace FastBite.Areas.Customer.Controllers
             }
             return RedirectToAction("PlaceOrder");
         }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult RemoveOffer()
+        {
+            HttpContext.Session.Remove(StaticDefinitions.CouponCode);
+            return RedirectToAction("PlaceOrder");
+        }
     }
 }

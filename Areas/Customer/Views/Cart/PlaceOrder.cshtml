@@ -71,7 +71,7 @@
             <div class="list-group-item">
                 <div class="row">
                     <div class="col-6">Total</div>
-                    <div class="col-6 text-right">@Model.Cart.OrderTotal</div>
+                    <div class="col-6 text-right" id="Total">@Model.Cart.OrderTotal</div>
                 </div>
             </div>
         </div>
@@ -81,5 +81,11 @@
                 <button type="submit" class="btn btn-secondary">Apply</button>
             </div>
         </form>
+        @if (!string.IsNullOrEmpty(Model.Cart.offercode))
+        {
+            <form asp-action="RemoveOffer" method="post">
+                <button type="submit" class="btn btn-outline-danger btn-sm mt-2">Remove</button>
+            </form>
+        }
     </div>
 </div>

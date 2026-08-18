@@ -86,8 +86,13 @@ namespace FastBite.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                model.subCategory.Id = id;
-                _db.SubCategory.Update(model.subCategory);
+                var existing = await _db.SubCategory.FindAsync(id);
+                if (existing == null)
+                {
+                    return NotFound();
+                }
+                existing.Name = model.subCategory.Name;
+                existing.CategoryId = model.subCategory.CategoryId;
                 await _db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }

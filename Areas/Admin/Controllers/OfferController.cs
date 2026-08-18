@@ -63,8 +63,16 @@ namespace FastBite.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                offer.Id = id;
-                _db.Offer.Update(offer);
+                var existing = await _db.Offer.FindAsync(id);
+                if (existing == null)
+                {
+                    return NotFound();
+                }
+                existing.Name = offer.Name;
+                existing.CouponType = offer.CouponType;
+                existing.Discount = offer.Discount;
+                existing.MinimumAmount = offer.MinimumAmount;
+                existing.isActive = offer.isActive;
                 await _db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }

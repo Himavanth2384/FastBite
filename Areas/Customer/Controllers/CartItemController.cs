@@ -80,7 +80,7 @@ namespace FastBite.Areas.Customer.Controllers
                 _db.CartItem.Add(new CartItem { ApplicationUserId = uid, MenuItemId = id, Count = Count });
             }
             await _db.SaveChangesAsync();
-            return RedirectToAction("PlaceOrder", "Cart");
+            return RedirectToAction("MenuItems", "Home", new { id = menuItem.RestaurantId });
         }
     }
 }

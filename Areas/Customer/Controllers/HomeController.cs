@@ -27,7 +27,7 @@ namespace FastBite.Controllers
 
         public async Task<IActionResult> Index()
         {
-            var restaurants = await _db.Restaurant.ToListAsync();
+            var restaurants = await _db.Restaurant.OrderBy(r => r.Id).ToListAsync();
             return View(restaurants);
         }
 
@@ -38,7 +38,8 @@ namespace FastBite.Controllers
             {
                 return NotFound();
             }
-            var menuItems = await _db.MenuItem.Include(m => m.Category).Where(m => m.RestaurantId == id).ToListAsync();
+            var menuItems = await _db.MenuItem.Include(m => m.Category).Where(m => m.RestaurantId == id)
+                .OrderBy(m => m.CategoryId).ThenBy(m => m.Id).ToListAsync();
             var categories = menuItems.GroupBy(m => m.CategoryId).Select(g => g.First().Category).ToList();
             var model = new CategoryAndMenuItemViewModel
             {

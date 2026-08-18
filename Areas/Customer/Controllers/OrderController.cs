@@ -81,8 +81,7 @@ namespace FastBite.Areas.Customer.Controllers
             return View(model);
         }
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
+        [HttpGet]
         public async Task<IActionResult> AcceptOrder(int id, int restid)
         {
             var cart = await _db.Cart.FindAsync(id);
@@ -94,8 +93,7 @@ namespace FastBite.Areas.Customer.Controllers
             return RedirectToAction("PendingRestaurantOrderDetails", new { restid });
         }
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
+        [HttpGet]
         public async Task<IActionResult> OrderPrepared(int id, int restid)
         {
             var cart = await _db.Cart.FindAsync(id);
@@ -107,8 +105,7 @@ namespace FastBite.Areas.Customer.Controllers
             return RedirectToAction("PendingRestaurantOrderDetails", new { restid });
         }
 
-        [HttpPost]
-        [ValidateAntiForgeryToken]
+        [HttpGet]
         public async Task<IActionResult> CancelOrder(int id, int restid)
         {
             var cart = await _db.Cart.FindAsync(id);

@@ -66,8 +66,12 @@ namespace FastBite.Areas.Admin.Controllers
         {
             if (ModelState.IsValid)
             {
-                category.Id = id;
-                _db.Category.Update(category);
+                var existing = await _db.Category.FindAsync(id);
+                if (existing == null)
+                {
+                    return NotFound();
+                }
+                existing.Name = category.Name;
                 await _db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }

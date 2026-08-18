@@ -13,7 +13,7 @@ namespace FastBite.Utility
      public const string RestaurantOwner = "RestaurantOwner";
      public const string CouponCode = "CouponCode";
 
-     public const string PendingConfirmation = "Order Placed and  Pending Confirmation at Restaurant";
+     public const string PendingConfirmation = "Order Placed and Pending Confirmation at Restaurant";
       public const string OrderConfirmed = "Order Approved and Food is being Prepared";
         public const string orderReady = "Order Ready for Pickup";
       public const string DeliveryPersonAssigned = "Delivery Person Assigned";

@@ -100,6 +100,12 @@ namespace FastBite
                     pattern: "{area=Customer}/{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
+
+            using (var scope = app.ApplicationServices.CreateScope())
+            {
+                var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+                FastBite.Utility.IdentitySeeder.SeedRolesAsync(roleManager).GetAwaiter().GetResult();
+            }
         }
     }
 }
