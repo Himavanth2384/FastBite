@@ -34,7 +34,7 @@ namespace FastBite.Areas.Admin.Controllers
         public async Task<IActionResult> Index()
         {
             var uid = _userManager.GetUserId(User);
-            var restaurants = await _db.Restaurant.Where(r => r.OwenerID == uid).ToListAsync();
+            var restaurants = await _db.Restaurant.Where(r => r.OwenerID == uid).OrderBy(r => r.Id).ToListAsync();
             return View(restaurants);
         }
 

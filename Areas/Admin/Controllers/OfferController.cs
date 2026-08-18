@@ -1,3 +1,4 @@
+using System.Linq;
 using System.Threading.Tasks;
 using FastBite.Data;
 using FastBite.Models;
@@ -22,7 +23,7 @@ namespace FastBite.Areas.Admin.Controllers
         [HttpGet]
         public async Task<IActionResult> Index()
         {
-            var offers = await _db.Offer.ToListAsync();
+            var offers = await _db.Offer.OrderBy(o => o.Id).ToListAsync();
             return View(offers);
         }
 

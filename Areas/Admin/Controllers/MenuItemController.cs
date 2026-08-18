@@ -39,7 +39,7 @@ namespace FastBite.Areas.Admin.Controllers
                 return NotFound();
             }
             var menuItems = await _db.MenuItem.Include(m => m.Category).Include(m => m.SubCategory)
-                .Where(m => m.RestaurantId == id).ToListAsync();
+                .Where(m => m.RestaurantId == id).OrderBy(m => m.Id).ToListAsync();
             var model = new RestaurantMenuItemViewModel
             {
                 Restaurant = restaurant,
@@ -54,8 +54,8 @@ namespace FastBite.Areas.Admin.Controllers
             var model = new MenuItemViewModel
             {
                 MenuItem = new MenuItem { RestaurantId = id, price = 0 },
-                Category = await _db.Category.ToListAsync(),
-                SubCategory = await _db.SubCategory.ToListAsync()
+                Category = await _db.Category.OrderBy(c => c.Id).ToListAsync(),
+                SubCategory = await _db.SubCategory.OrderBy(s => s.Id).ToListAsync()
             };
             return View(model);
         }
@@ -91,8 +91,8 @@ namespace FastBite.Areas.Admin.Controllers
                 await _db.SaveChangesAsync();
                 return RedirectToAction("Index", new { id = model.MenuItem.RestaurantId });
             }
-            model.Category = await _db.Category.ToListAsync();
-            model.SubCategory = await _db.SubCategory.ToListAsync();
+            model.Category = await _db.Category.OrderBy(c => c.Id).ToListAsync();
+            model.SubCategory = await _db.SubCategory.OrderBy(s => s.Id).ToListAsync();
             return View(model);
         }
 
@@ -107,8 +107,8 @@ namespace FastBite.Areas.Admin.Controllers
             var model = new MenuItemViewModel
             {
                 MenuItem = menuItem,
-                Category = await _db.Category.ToListAsync(),
-                SubCategory = await _db.SubCategory.ToListAsync()
+                Category = await _db.Category.OrderBy(c => c.Id).ToListAsync(),
+                SubCategory = await _db.SubCategory.OrderBy(s => s.Id).ToListAsync()
             };
             return View(model);
         }
@@ -136,8 +136,8 @@ namespace FastBite.Areas.Admin.Controllers
                 await _db.SaveChangesAsync();
                 return RedirectToAction("Index", new { id = existing.RestaurantId });
             }
-            model.Category = await _db.Category.ToListAsync();
-            model.SubCategory = await _db.SubCategory.ToListAsync();
+            model.Category = await _db.Category.OrderBy(c => c.Id).ToListAsync();
+            model.SubCategory = await _db.SubCategory.OrderBy(s => s.Id).ToListAsync();
             return View(model);
         }
 

@@ -26,7 +26,7 @@ namespace FastBite.Areas.Admin.Controllers
         [HttpGet]
         public async Task<IActionResult> Index()
         {
-            var categories = await _db.Category.ToListAsync();
+            var categories = await _db.Category.OrderBy(c => c.Id).ToListAsync();
             return View(categories);
         }
 

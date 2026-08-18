@@ -32,7 +32,7 @@ namespace FastBite.Areas.Admin.Controllers
         [HttpGet]
         public async Task<IActionResult> Index()
         {
-            var subCategories = await _db.SubCategory.Include(s => s.category).ToListAsync();
+            var subCategories = await _db.SubCategory.Include(s => s.category).OrderBy(s => s.Id).ToListAsync();
             return View(subCategories);
         }
 
@@ -41,8 +41,8 @@ namespace FastBite.Areas.Admin.Controllers
         {
             var model = new CategoryAndSubCategoryModel
             {
-                categoryList = await _db.Category.ToListAsync(),
-                subCategoryList = await _db.SubCategory.Select(s => s.Name).ToListAsync(),
+                categoryList = await _db.Category.OrderBy(c => c.Id).ToListAsync(),
+                subCategoryList = await _db.SubCategory.OrderBy(s => s.Id).Select(s => s.Name).ToListAsync(),
                 subCategory = new SubCategory()
             };
             return View(model);
@@ -58,8 +58,8 @@ namespace FastBite.Areas.Admin.Controllers
                 await _db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
-            model.categoryList = await _db.Category.ToListAsync();
-            model.subCategoryList = await _db.SubCategory.Select(s => s.Name).ToListAsync();
+            model.categoryList = await _db.Category.OrderBy(c => c.Id).ToListAsync();
+            model.subCategoryList = await _db.SubCategory.OrderBy(s => s.Id).Select(s => s.Name).ToListAsync();
             return View(model);
         }
 
@@ -73,8 +73,8 @@ namespace FastBite.Areas.Admin.Controllers
             }
             var model = new CategoryAndSubCategoryModel
             {
-                categoryList = await _db.Category.ToListAsync(),
-                subCategoryList = await _db.SubCategory.Select(s => s.Name).ToListAsync(),
+                categoryList = await _db.Category.OrderBy(c => c.Id).ToListAsync(),
+                subCategoryList = await _db.SubCategory.OrderBy(s => s.Id).Select(s => s.Name).ToListAsync(),
                 subCategory = subCategory
             };
             return View(model);
@@ -91,8 +91,8 @@ namespace FastBite.Areas.Admin.Controllers
                 await _db.SaveChangesAsync();
                 return RedirectToAction("Index");
             }
-            model.categoryList = await _db.Category.ToListAsync();
-            model.subCategoryList = await _db.SubCategory.Select(s => s.Name).ToListAsync();
+            model.categoryList = await _db.Category.OrderBy(c => c.Id).ToListAsync();
+            model.subCategoryList = await _db.SubCategory.OrderBy(s => s.Id).Select(s => s.Name).ToListAsync();
             return View(model);
         }
 
