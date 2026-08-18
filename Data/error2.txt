@@ -1,235 +1,266 @@
-cd FastBite.Tests && rm -rf reports && dotnet build && dotnet test --logger xunit --results-directory ./reports/ 
 Microsoft (R) Build Engine version 16.7.1+52cd83677 for .NET
 Copyright (C) Microsoft Corporation. All rights reserved.
 
   Determining projects to restore...
-/projects/challenge/FastBite.Tests/FastBite.Tests.csproj : warning NU1701: Package 'XunitOrderer 1.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.
-  All projects are up-to-date for restore.
-/projects/challenge/FastBite.Tests/FastBite.Tests.csproj : warning NU1701: Package 'XunitOrderer 1.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.
-  FastBite -> /projects/challenge/FastBite/bin/Debug/netcoreapp3.1/FastBite.dll
+/projects/challenge/FastBite.Tests/FastBite.Tests.csproj : warning NU1701: Package 'XunitOrderer 1.0.0' was restor
+ed using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.                               All projects are up-to-date for restore.
+/projects/challenge/FastBite.Tests/FastBite.Tests.csproj : warning NU1701: Package 'XunitOrderer 1.0.0' was restor
+ed using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.                               FastBite -> /projects/challenge/FastBite/bin/Debug/netcoreapp3.1/FastBite.dll
   FastBite -> /projects/challenge/FastBite/bin/Debug/netcoreapp3.1/FastBite.Views.dll
   FastBite.Tests -> /projects/challenge/FastBite.Tests/bin/Debug/netcoreapp3.1/FastBite.Tests.dll
 
 Build succeeded.
 
-/projects/challenge/FastBite.Tests/FastBite.Tests.csproj : warning NU1701: Package 'XunitOrderer 1.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.
-/projects/challenge/FastBite.Tests/FastBite.Tests.csproj : warning NU1701: Package 'XunitOrderer 1.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.
-    2 Warning(s)
+/projects/challenge/FastBite.Tests/FastBite.Tests.csproj : warning NU1701: Package 'XunitOrderer 1.0.0' was restor
+ed using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.                             /projects/challenge/FastBite.Tests/FastBite.Tests.csproj : warning NU1701: Package 'XunitOrderer 1.0.0' was restor
+ed using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.                                 2 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:05.37
-/projects/challenge/FastBite.Tests/FastBite.Tests.csproj : warning NU1701: Package 'XunitOrderer 1.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.
-/projects/challenge/FastBite.Tests/FastBite.Tests.csproj : warning NU1701: Package 'XunitOrderer 1.0.0' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.
-Test run for /projects/challenge/FastBite.Tests/bin/Debug/netcoreapp3.1/FastBite.Tests.dll(.NETCoreApp,Version=v3.1)
-Microsoft (R) Test Execution Command Line Tool Version 16.7.0
+Time Elapsed 00:00:04.06
+/projects/challenge/FastBite.Tests/FastBite.Tests.csproj : warning NU1701: Package 'XunitOrderer 1.0.0' was restor
+ed using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.                             /projects/challenge/FastBite.Tests/FastBite.Tests.csproj : warning NU1701: Package 'XunitOrderer 1.0.0' was restor
+ed using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETCoreApp,Version=v3.1'. This package may not be fully compatible with your project.                             Test run for /projects/challenge/FastBite.Tests/bin/Debug/netcoreapp3.1/FastBite.Tests.dll(.NETCoreApp,Version=v3.
+1)                                                                                                                Microsoft (R) Test Execution Command Line Tool Version 16.7.0
 Copyright (c) Microsoft Corporation.  All rights reserved.
 
 Starting test execution, please wait...
 
 A total of 1 test files matched the specified pattern.
-Starting ChromeDriver 78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}) on port 44201
-Only local connections are allowed.
+Starting ChromeDriver 78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}) on por
+t 41865                                                                                                           Only local connections are allowed.
 Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
 test1
 Cannot assign requested address Cannot assign requested address
-[xUnit.net 00:00:11.68]     FastBite.Tests.FastBiteTests.addCustomer [FAIL]
-Starting ChromeDriver 78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}) on port 40055
+Cannot assign requested address Cannot assign requested address
+Cannot assign requested address Cannot assign requested address
+Cannot assign requested address Cannot assign requested address
+Starting ChromeDriver 78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}) on por
+t 41841                                                                                                           [xUnit.net 00:00:03.90]     FastBite.Tests.FastBiteTests.addCustomer [FAIL]
 Only local connections are allowed.
 Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
 Cannot assign requested address Cannot assign requested address
-Cannot assign requested address Cannot assign requested address
-Cannot assign requested address Cannot assign requested address
-  X FastBite.Tests.FastBiteTests.addCustomer [8s 299ms]
+  X FastBite.Tests.FastBiteTests.addCustomer [1s 46ms]
   Error Message:
-   OpenQA.Selenium.NoSuchElementException : no such element: Unable to locate element: {"method":"xpath","selector":"//a[@title='Manage']"}
-  (Session info: headless chrome=78.0.3904.108)
+   OpenQA.Selenium.NoSuchElementException : no such element: Unable to locate element: {"method":"css selector","s
+elector":"#Input_Name"}                                                                                             (Session info: headless chrome=78.0.3904.108)
   Stack Trace:
      at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
    at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
    at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
-   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByXPath(String xpath)
-   at OpenQA.Selenium.By.<>c__DisplayClass19_0.<XPath>b__0(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementById(String id)
+   at OpenQA.Selenium.By.<>c__DisplayClass16_0.<Id>b__0(ISearchContext context)
    at OpenQA.Selenium.By.FindElement(ISearchContext context)
    at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
-   at FastBite.Tests.FastBiteTests.addCustomer() in /projects/challenge/FastBite.Tests/FastBiteTests.cs:line 57
+   at FastBite.Tests.FastBiteTests.addCustomer() in /projects/challenge/FastBite.Tests/FastBiteTests.cs:line 41
 Cannot assign requested address Cannot assign requested address
 Cannot assign requested address Cannot assign requested address
 Cannot assign requested address Cannot assign requested address
 Cannot assign requested address Cannot assign requested address
 Cannot assign requested address Cannot assign requested address
 Cannot assign requested address Cannot assign requested address
+[xUnit.net 00:00:04.84]     FastBite.Tests.FastBiteTests.loginCustomer [FAIL]
 Cannot assign requested address Cannot assign requested address
-Cannot assign requested address Cannot assign requested address
-Starting ChromeDriver 78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}) on port 44401
+Starting ChromeDriver 78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}) on por
+t 41809                                                                                                           Cannot assign requested address Cannot assign requested address
 Only local connections are allowed.
 Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
 Cannot assign requested address Cannot assign requested address
 Cannot assign requested address Cannot assign requested address
 Cannot assign requested address Cannot assign requested address
 Cannot assign requested address Cannot assign requested address
-[xUnit.net 00:00:17.18]     FastBite.Tests.FastBiteTests.addAdmin [FAIL]
+Cannot assign requested address Cannot assign requested address
+[xUnit.net 00:00:05.48]     FastBite.Tests.FastBiteTests.addAdmin [FAIL]
+Cannot assign requested address Cannot assign requested address
+Starting ChromeDriver 78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}) on por
+t 39397                                                                                                           Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+Cannot assign requested address Cannot assign requested address
+[xUnit.net 00:00:05.87]     FastBite.Tests.FastBiteTests.addDeliveryPerson [FAIL]
+Cannot assign requested address Cannot assign requested address
+Starting ChromeDriver 78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}) on por
+t 36357                                                                                                           Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
 Cannot assign requested address Cannot assign requested address
 Cannot assign requested address Cannot assign requested address
-  X FastBite.Tests.FastBiteTests.addAdmin [3s 255ms]
+  X FastBite.Tests.FastBiteTests.loginCustomer [928ms]
   Error Message:
-   OpenQA.Selenium.NoSuchElementException : no such element: Unable to locate element: {"method":"xpath","selector":"//a[@title='Manage']"}
-  (Session info: headless chrome=78.0.3904.108)
+   OpenQA.Selenium.NoSuchElementException : no such element: Unable to locate element: {"method":"css selector","s
+elector":"#Input_Email"}                                                                                            (Session info: headless chrome=78.0.3904.108)
   Stack Trace:
      at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
    at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
    at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
-   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByXPath(String xpath)
-   at OpenQA.Selenium.By.<>c__DisplayClass19_0.<XPath>b__0(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementById(String id)
+   at OpenQA.Selenium.By.<>c__DisplayClass16_0.<Id>b__0(ISearchContext context)
    at OpenQA.Selenium.By.FindElement(ISearchContext context)
    at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
-   at FastBite.Tests.FastBiteTests.addAdmin() in /projects/challenge/FastBite.Tests/FastBiteTests.cs:line 95
-Cannot assign requested address Cannot assign requested address
-Starting ChromeDriver 78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}) on port 42017
-Only local connections are allowed.
-Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
-Cannot assign requested address Cannot assign requested address
-Cannot assign requested address Cannot assign requested address
-[xUnit.net 00:00:20.44]     FastBite.Tests.FastBiteTests.addDeliveryPerson [FAIL]
-Cannot assign requested address Cannot assign requested address
-Cannot assign requested address Cannot assign requested address
-Cannot assign requested address Cannot assign requested address
-Cannot assign requested address Cannot assign requested address
-Cannot assign requested address Cannot assign requested address
-Cannot assign requested address Cannot assign requested address
-Cannot assign requested address Cannot assign requested address
-  X FastBite.Tests.FastBiteTests.addDeliveryPerson [3s 252ms]
-Cannot assign requested address Cannot assign requested address
+   at FastBite.Tests.FastBiteTests.loginCustomer() in /projects/challenge/FastBite.Tests/FastBiteTests.cs:line 64
+  X FastBite.Tests.FastBiteTests.addAdmin [644ms]
   Error Message:
-Starting ChromeDriver 78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}) on port 40635
-Only local connections are allowed.
-Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
-   OpenQA.Selenium.NoSuchElementException : no such element: Unable to locate element: {"method":"xpath","selector":"//a[@title='Manage']"}
-  (Session info: headless chrome=78.0.3904.108)
+   OpenQA.Selenium.NoSuchElementException : no such element: Unable to locate element: {"method":"css selector","s
+elector":"#Input_Name"}                                                                                             (Session info: headless chrome=78.0.3904.108)
   Stack Trace:
      at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
    at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
    at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
-   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByXPath(String xpath)
-   at OpenQA.Selenium.By.<>c__DisplayClass19_0.<XPath>b__0(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementById(String id)
+   at OpenQA.Selenium.By.<>c__DisplayClass16_0.<Id>b__0(ISearchContext context)
    at OpenQA.Selenium.By.FindElement(ISearchContext context)
    at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
-   at FastBite.Tests.FastBiteTests.addDeliveryPerson() in /projects/challenge/FastBite.Tests/FastBiteTests.cs:line 122
-Cannot assign requested address Cannot assign requested address
-Cannot assign requested address Cannot assign requested address
-Cannot assign requested address Cannot assign requested address
-Cannot assign requested address Cannot assign requested address
-Cannot assign requested address Cannot assign requested address
-Cannot assign requested address Cannot assign requested address
-Cannot assign requested address Cannot assign requested address
-Cannot assign requested address Cannot assign requested address
-Cannot assign requested address Cannot assign requested address
-Cannot assign requested address Cannot assign requested address
-Cannot assign requested address Cannot assign requested address
-Starting ChromeDriver 78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}) on port 42975
-Only local connections are allowed.
-Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
-[xUnit.net 00:00:23.66]     FastBite.Tests.FastBiteTests.addRestaurantOwner [FAIL]
-  X FastBite.Tests.FastBiteTests.addRestaurantOwner [3s 217ms]
+   at FastBite.Tests.FastBiteTests.addAdmin() in /projects/challenge/FastBite.Tests/FastBiteTests.cs:line 78
+  X FastBite.Tests.FastBiteTests.addDeliveryPerson [381ms]
   Error Message:
-   OpenQA.Selenium.NoSuchElementException : no such element: Unable to locate element: {"method":"xpath","selector":"//a[@title='Manage']"}
-  (Session info: headless chrome=78.0.3904.108)
+   OpenQA.Selenium.NoSuchElementException : no such element: Unable to locate element: {"method":"css selector","s
+elector":"#Input_Name"}                                                                                             (Session info: headless chrome=78.0.3904.108)
   Stack Trace:
      at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
    at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
    at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
-   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByXPath(String xpath)
-   at OpenQA.Selenium.By.<>c__DisplayClass19_0.<XPath>b__0(ISearchContext context)
-   at FastBite.Tests.FastBiteTests.addRestaurantOwner() in /projects/challenge/FastBite.Tests/FastBiteTests.cs:line 147
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementById(String id)
+   at OpenQA.Selenium.By.<>c__DisplayClass16_0.<Id>b__0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at FastBite.Tests.FastBiteTests.addDeliveryPerson() in /projects/challenge/FastBite.Tests/FastBiteTests.cs:line
+ 105                                                                                                              [xUnit.net 00:00:06.28]     FastBite.Tests.FastBiteTests.addRestaurantOwner [FAIL]
+Starting ChromeDriver 78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}) on por
+t 41537                                                                                                           Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
 Cannot assign requested address Cannot assign requested address
-[xUnit.net 00:00:27.77]     FastBite.Tests.FastBiteTests.addCategory [FAIL]
+[xUnit.net 00:00:06.65]     FastBite.Tests.FastBiteTests.addCategory [FAIL]
 Cannot assign requested address Cannot assign requested address
 Cannot assign requested address Cannot assign requested address
-Starting ChromeDriver 78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}) on port 35043
-Only local connections are allowed.
+Cannot assign requested address Cannot assign requested address
+Cannot assign requested address Cannot assign requested address
+Cannot assign requested address Cannot assign requested address
+Cannot assign requested address Cannot assign requested address
+Cannot assign requested address Cannot assign requested address
+Starting ChromeDriver 78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}) on por
+t 34181                                                                                                           Only local connections are allowed.
 Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
 Cannot assign requested address Cannot assign requested address
 Cannot assign requested address Cannot assign requested address
-  X FastBite.Tests.FastBiteTests.addCategory [4s 101ms]
-  Error Message:
-   Assert.Equal() Failure
-                  ↓ (pos 8)
-Expected: Apetizer1
-Actual:   Apetizer
-                  ↑ (pos 8)
-  Stack Trace:
-     at FastBite.Tests.FastBiteTests.addCategory() in /projects/challenge/FastBite.Tests/FastBiteTests.cs:line 186
 Cannot assign requested address Cannot assign requested address
 Cannot assign requested address Cannot assign requested address
-[xUnit.net 00:00:30.64]     FastBite.Tests.FastBiteTests.addSubcategory [FAIL]
-  X Cannot assign requested address Cannot assign requested address
-FastBite.Tests.FastBiteTests.addSubcategory [2s 869ms]
+Cannot assign requested address Cannot assign requested address
+Cannot assign requested address Cannot assign requested address
+Cannot assign requested address Cannot assign requested address
+[xUnit.net 00:00:07.20]     FastBite.Tests.FastBiteTests.addSubcategory [FAIL]
+Cannot assign requested address Cannot assign requested address
+Cannot assign requested address Cannot assign requested address
+Cannot assign requested address Cannot assign requested address
+Starting ChromeDriver 78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}) on por
+t 37093                                                                                                           Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+Cannot assign requested address Cannot assign requested address
+Cannot assign requested address Cannot assign requested address
+Cannot assign requested address Cannot assign requested address
+Cannot assign requested address Cannot assign requested address
+Cannot assign requested address Cannot assign requested address
+[xUnit.net 00:00:07.62]     FastBite.Tests.FastBiteTests.addRestaurant [FAIL]
+Cannot assign requested address Cannot assign requested address
+Cannot assign requested address Cannot assign requested address
+Starting ChromeDriver 78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}) on por
+t 40441                                                                                                           Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+Cannot assign requested address Cannot assign requested address
+Cannot assign requested address Cannot assign requested address
+Cannot assign requested address Cannot assign requested address
+Cannot assign requested address Cannot assign requested address
+Cannot assign requested address Cannot assign requested address
+Cannot assign requested address Cannot assign requested address
+Cannot assign requested address Cannot assign requested address
+Cannot assign requested address Cannot assign requested address
+Cannot assign requested address Cannot assign requested address
+  X FastBite.Tests.FastBiteTests.addRestaurantOwner [406ms]
   Error Message:
-   OpenQA.Selenium.NoSuchElementException : no such element: Unable to locate element: {"method":"xpath","selector":"//table/tbody/tr[2]/td[1]"}
-  (Session info: headless chrome=78.0.3904.108)
+   OpenQA.Selenium.NoSuchElementException : no such element: Unable to locate element: {"method":"css selector","s
+elector":"#Input_Name"}                                                                                             (Session info: headless chrome=78.0.3904.108)
   Stack Trace:
      at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
    at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
    at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
-   at FastBite.Tests.FastBiteTests.addSubcategory() in /projects/challenge/FastBite.Tests/FastBiteTests.cs:line 254
-Cannot assign requested address Cannot assign requested address
-Cannot assign requested address Cannot assign requested address
-Cannot assign requested address Cannot assign requested address
-Cannot assign requested address Cannot assign requested address
-Starting ChromeDriver 78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}) on port 46613
-Only local connections are allowed.
-Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
-Cannot assign requested address Cannot assign requested address
-Cannot assign requested address Cannot assign requested address
-Cannot assign requested address Cannot assign requested address
-Cannot assign requested address Cannot assign requested address
-[xUnit.net 00:00:34.05]     FastBite.Tests.FastBiteTests.addRestaurant [FAIL]
-  X FastBite.Tests.FastBiteTests.addRestaurant [3s 405ms]
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementById(String id)
+   at OpenQA.Selenium.By.<>c__DisplayClass16_0.<Id>b__0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at FastBite.Tests.FastBiteTests.addRestaurantOwner() in /projects/challenge/FastBite.Tests/FastBiteTests.cs:lin
+e 130                                                                                                               X FastBite.Tests.FastBiteTests.addCategory [364ms]
   Error Message:
-   OpenQA.Selenium.NoSuchElementException : no such element: Unable to locate element: {"method":"css selector","selector":"#CategoryId"}
-  (Session info: headless chrome=78.0.3904.108)
+   OpenQA.Selenium.NoSuchElementException : no such element: Unable to locate element: {"method":"css selector","s
+elector":"#Input_Email"}                                                                                            (Session info: headless chrome=78.0.3904.108)
   Stack Trace:
      at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
    at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
    at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
-   at FastBite.Tests.FastBiteTests.addRestaurant() in /projects/challenge/FastBite.Tests/FastBiteTests.cs:line 292
-Starting ChromeDriver 78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}) on port 33623
-Only local connections are allowed.
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementById(String id)
+   at OpenQA.Selenium.By.<>c__DisplayClass16_0.<Id>b__0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at FastBite.Tests.FastBiteTests.addCategory() in /projects/challenge/FastBite.Tests/FastBiteTests.cs:line 154
+  X FastBite.Tests.FastBiteTests.addSubcategory [544ms]
+  Error Message:
+   OpenQA.Selenium.NoSuchElementException : no such element: Unable to locate element: {"method":"css selector","s
+elector":"#Input_Email"}                                                                                            (Session info: headless chrome=78.0.3904.108)
+  Stack Trace:
+     at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementById(String id)
+   at OpenQA.Selenium.By.<>c__DisplayClass16_0.<Id>b__0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at FastBite.Tests.FastBiteTests.addSubcategory() in /projects/challenge/FastBite.Tests/FastBiteTests.cs:line 19
+2                                                                                                                   X FastBite.Tests.FastBiteTests.addRestaurant [421ms]
+  Error Message:
+   OpenQA.Selenium.NoSuchElementException : no such element: Unable to locate element: {"method":"css selector","s
+elector":"#Input_Email"}                                                                                            (Session info: headless chrome=78.0.3904.108)
+  Stack Trace:
+     at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementById(String id)
+   at OpenQA.Selenium.By.<>c__DisplayClass16_0.<Id>b__0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at FastBite.Tests.FastBiteTests.addRestaurant() in /projects/challenge/FastBite.Tests/FastBiteTests.cs:line 263
+[xUnit.net 00:00:07.97]     FastBite.Tests.FastBiteTests.placeOrder [FAIL]
+Starting ChromeDriver 78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}) on por
+t 38375                                                                                                           Only local connections are allowed.
 Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
 Cannot assign requested address Cannot assign requested address
-[xUnit.net 00:00:36.42]     FastBite.Tests.FastBiteTests.placeOrder [FAIL]
-  X FastBite.Tests.FastBiteTests.placeOrder [2s 349ms]
+Cannot assign requested address Cannot assign requested address
+[xUnit.net 00:00:08.30]     FastBite.Tests.FastBiteTests.confirmorder [FAIL]
+  X FastBite.Tests.FastBiteTests.placeOrder [337ms]
   Error Message:
-   System.InvalidOperationException : Sequence contains no elements
+   OpenQA.Selenium.NoSuchElementException : no such element: Unable to locate element: {"method":"css selector","s
+elector":"#Input_Email"}                                                                                            (Session info: headless chrome=78.0.3904.108)
   Stack Trace:
-     at System.Linq.ThrowHelper.ThrowNoElementsException()
-   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
-   at FastBite.Tests.FastBiteTests.placeOrder() in /projects/challenge/FastBite.Tests/FastBiteTests.cs:line 349
-Cannot assign requested address Cannot assign requested address
-Cannot assign requested address Cannot assign requested address
-Cannot assign requested address Cannot assign requested address
-Cannot assign requested address Cannot assign requested address
-Cannot assign requested address Cannot assign requested address
-Starting ChromeDriver 78.0.3904.70 (edb9c9f3de0247fd912a77b7f6cae7447f6d3ad5-refs/branch-heads/3904@{#800}) on port 43899
-Only local connections are allowed.
-Cannot assign requested address Cannot assign requested address
-Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
-Cannot assign requested address Cannot assign requested address
-Cannot assign requested address Cannot assign requested address
-Cannot assign requested address Cannot assign requested address
-Cannot assign requested address Cannot assign requested address
-[xUnit.net 00:00:39.98]     FastBite.Tests.FastBiteTests.confirmorder [FAIL]
-  X FastBite.Tests.FastBiteTests.confirmorder [3s 527ms]
+     at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementById(String id)
+   at OpenQA.Selenium.By.<>c__DisplayClass16_0.<Id>b__0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at FastBite.Tests.FastBiteTests.placeOrder() in /projects/challenge/FastBite.Tests/FastBiteTests.cs:line 339
+  X FastBite.Tests.FastBiteTests.confirmorder [334ms]
   Error Message:
-   Assert.Equal() Failure
-Expected: 2
-Actual:   0
+   OpenQA.Selenium.NoSuchElementException : no such element: Unable to locate element: {"method":"css selector","s
+elector":"#Input_Email"}                                                                                            (Session info: headless chrome=78.0.3904.108)
   Stack Trace:
-     at FastBite.Tests.FastBiteTests.confirmorder() in /projects/challenge/FastBite.Tests/FastBiteTests.cs:line 442
+     at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementById(String id)
+   at OpenQA.Selenium.By.<>c__DisplayClass16_0.<Id>b__0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at FastBite.Tests.FastBiteTests.confirmorder() in /projects/challenge/FastBite.Tests/FastBiteTests.cs:line 425
 Results File: /projects/challenge/FastBite.Tests/reports/TestResults.xml
 
 Test Run Failed.
 Total tests: 10
-     Passed: 1
-     Failed: 9
- Total time: 42.2817 Seconds
-/usr/share/dotnet/sdk/3.1.404/Microsoft.TestPlatform.targets(32,5): error MSB4181: The "Microsoft.TestPlatform.Build.Tasks.VSTestTask" task returned false but did not log an error. [/projects/challenge/FastBite.Tests/FastBite.Tests.csproj]
+     Failed: 10
+ Total time: 9.6377 Seconds
+/usr/share/dotnet/sdk/3.1.404/Microsoft.TestPlatform.targets(32,5): error MSB4181: The "Microsoft.TestPlatform.Bui
+ld.Tasks.VSTestTask" task returned false but did not log an error. [/projects/challenge/FastBite.Tests/FastBite.Tests.csproj]                                                                                                       
