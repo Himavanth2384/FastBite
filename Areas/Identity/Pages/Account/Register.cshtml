@@ -1,0 +1,97 @@
+@page
+@using FastBite.Utility
+@model RegisterModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+<br/>
+<h2 class="text-info">Create a New account</h2>
+<br/>
+
+<form method="post" asp-route-returnUrl="@Model.ReturnUrl">
+    <div class="border backgroundwhite">
+    
+           <div asp-validation-summary="ModelOnly" class="text-danger"> </div>
+            <div class="form-group row">
+                <div class="col-2">
+                    <label asp-for="Input.Name" class="col-form-label"></label>
+                </div>
+                <div class="col-5">
+                    <input asp-for="Input.Name"  class="form-control"/>
+                </div>
+                <span asp-validation-for="Input.Name" class="text-danger"></span>
+            </div>
+             <div class="form-group row">
+                <div class="col-2">
+                    <label asp-for="Input.Email" class="col-form-label"></label>
+                </div>
+                <div class="col-5">
+                    <input asp-for="Input.Email"  class="form-control"/>
+                </div>
+                <span asp-validation-for="Input.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group row">
+                <div class="col-2">
+                    <label asp-for="Input.PhoneNumber" class="col-form-label"></label>
+                </div>
+                <div class="col-5">
+                    <input asp-for="Input.PhoneNumber"  class="form-control"/>
+                </div>
+                <span asp-validation-for="Input.PhoneNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group row">
+                <div class="col-2">
+                    <label asp-for="Input.Address" class="col-form-label"></label>
+                </div>
+                <div class="col-5">
+                    <input asp-for="Input.Address"  class="form-control"/>
+                </div>
+                <span asp-validation-for="Input.Address" class="text-danger"></span>
+            </div>
+            <div class="form-group row">
+                <div class="col-2">
+                <label asp-for="Input.Password" class="col-form-label"></label>
+                </div>
+                <div class="col-5">
+                <input asp-for="Input.Password" class="form-control" />
+                </div>
+                <span asp-validation-for="Input.Password" class="text-danger"></span>
+            </div>
+           <div class="form-group row">
+                <div class="col-2">
+                <label asp-for="Input.ConfirmPassword" class="col-form-label"></label>
+                </div>
+                <div class="col-5">
+                <input asp-for="Input.ConfirmPassword" class="form-control" />
+                 </div>
+                <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+            </div>
+          
+                   <div class="form-group row">
+                <div class="col-2">
+                @* <label asp-for="Input.ConfirmPassword" class="col-form-label"></label> *@
+                </div>
+                <div class="col-5">
+                <input type="radio" name="rdUserRole" value="@StaticDefinitions.Admin" />@StaticDefinitions.Admin
+                <input type="radio" name="rdUserRole" value="@StaticDefinitions.DeliveryPerson" />@StaticDefinitions.DeliveryPerson
+
+                <input type="radio" name="rdUserRole" value="@StaticDefinitions.RestaurantOwner" />@StaticDefinitions.RestaurantOwner
+
+                 </div>
+               
+            </div>
+            
+            <div class="form-group row">
+                    <div class="col-5 offset-2">
+                        <button type="submit" class="btn btn-primary">Register</button>
+                    </div>
+            </div>
+  </div>  
+</form>
+
+
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
