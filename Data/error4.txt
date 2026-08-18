@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<assemblies timestamp="08/18/2026 18:59:52">
+  <assembly name="/projects/challenge/FastBite.Tests/bin/Debug/netcoreapp3.1/FastBite.Tests.dll" run-date="2026-08-18" run-time="18:59:52" total="10" passed="3" failed="7" skipped="0" time="23.370" errors="0">
+    <errors />
+    <collection total="10" passed="3" failed="7" skipped="0" name="Test collection for FastBite.Tests.FastBiteTests" time="23.370">
+      <test name="FastBite.Tests.FastBiteTests.addCustomer" type="FastBite.Tests.FastBiteTests" method="addCustomer" time="3.2886498" result="Pass">
+        <traits />
+      </test>
+      <test name="FastBite.Tests.FastBiteTests.loginCustomer" type="FastBite.Tests.FastBiteTests" method="loginCustomer" time="1.9289965" result="Pass">
+        <traits />
+      </test>
+      <test name="FastBite.Tests.FastBiteTests.addAdmin" type="FastBite.Tests.FastBiteTests" method="addAdmin" time="2.8858293" result="Fail">
+        <failure>
+          <message>OpenQA.Selenium.NoSuchElementException : no such element: Unable to locate element: {"method":"xpath","selector":"//a[@title='Manage']"}
+  (Session info: headless chrome=78.0.3904.108)</message>
+          <stack-trace>   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByXPath(String xpath)
+   at OpenQA.Selenium.By.&lt;&gt;c__DisplayClass19_0.&lt;XPath&gt;b__0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at FastBite.Tests.FastBiteTests.addAdmin() in /projects/challenge/FastBite.Tests/FastBiteTests.cs:line 95</stack-trace>
+        </failure>
+        <traits />
+      </test>
+      <test name="FastBite.Tests.FastBiteTests.addDeliveryPerson" type="FastBite.Tests.FastBiteTests" method="addDeliveryPerson" time="2.7867886" result="Fail">
+        <failure>
+          <message>OpenQA.Selenium.NoSuchElementException : no such element: Unable to locate element: {"method":"xpath","selector":"//a[@title='Manage']"}
+  (Session info: headless chrome=78.0.3904.108)</message>
+          <stack-trace>   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByXPath(String xpath)
+   at OpenQA.Selenium.By.&lt;&gt;c__DisplayClass19_0.&lt;XPath&gt;b__0(ISearchContext context)
+   at OpenQA.Selenium.By.FindElement(ISearchContext context)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(By by)
+   at FastBite.Tests.FastBiteTests.addDeliveryPerson() in /projects/challenge/FastBite.Tests/FastBiteTests.cs:line 122</stack-trace>
+        </failure>
+        <traits />
+      </test>
+      <test name="FastBite.Tests.FastBiteTests.addRestaurantOwner" type="FastBite.Tests.FastBiteTests" method="addRestaurantOwner" time="2.1920496" result="Fail">
+        <failure>
+          <message>OpenQA.Selenium.NoSuchElementException : no such element: Unable to locate element: {"method":"xpath","selector":"//a[@title='Manage']"}
+  (Session info: headless chrome=78.0.3904.108)</message>
+          <stack-trace>   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElementByXPath(String xpath)
+   at OpenQA.Selenium.By.&lt;&gt;c__DisplayClass19_0.&lt;XPath&gt;b__0(ISearchContext context)
+   at FastBite.Tests.FastBiteTests.addRestaurantOwner() in /projects/challenge/FastBite.Tests/FastBiteTests.cs:line 147</stack-trace>
+        </failure>
+        <traits />
+      </test>
+      <test name="FastBite.Tests.FastBiteTests.addCategory" type="FastBite.Tests.FastBiteTests" method="addCategory" time="1.7487475" result="Fail">
+        <failure>
+          <message>Assert.Equal() Failure
+                  ↓ (pos 8)
+Expected: Apetizer1
+Actual:   Apetizer
+                  ↑ (pos 8)</message>
+          <stack-trace>   at FastBite.Tests.FastBiteTests.addCategory() in /projects/challenge/FastBite.Tests/FastBiteTests.cs:line 186</stack-trace>
+        </failure>
+        <traits />
+      </test>
+      <test name="FastBite.Tests.FastBiteTests.addSubcategory" type="FastBite.Tests.FastBiteTests" method="addSubcategory" time="2.7580372" result="Fail">
+        <failure>
+          <message>OpenQA.Selenium.NoSuchElementException : no such element: Unable to locate element: {"method":"xpath","selector":"//table/tbody/tr[2]/td[1]"}
+  (Session info: headless chrome=78.0.3904.108)</message>
+          <stack-trace>   at OpenQA.Selenium.Remote.RemoteWebDriver.UnpackAndThrowOnError(Response errorResponse)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.FindElement(String mechanism, String value)
+   at FastBite.Tests.FastBiteTests.addSubcategory() in /projects/challenge/FastBite.Tests/FastBiteTests.cs:line 254</stack-trace>
+        </failure>
+        <traits />
+      </test>
+      <test name="FastBite.Tests.FastBiteTests.addRestaurant" type="FastBite.Tests.FastBiteTests" method="addRestaurant" time="3.6527014" result="Pass">
+        <traits />
+      </test>
+      <test name="FastBite.Tests.FastBiteTests.placeOrder" type="FastBite.Tests.FastBiteTests" method="placeOrder" time="0.9388448" result="Fail">
+        <failure>
+          <message>System.InvalidOperationException : Sequence contains no elements</message>
+          <stack-trace>   at System.Linq.ThrowHelper.ThrowNoElementsException()
+   at System.Linq.Enumerable.First[TSource](IEnumerable`1 source)
+   at FastBite.Tests.FastBiteTests.placeOrder() in /projects/challenge/FastBite.Tests/FastBiteTests.cs:line 349</stack-trace>
+        </failure>
+        <traits />
+      </test>
+      <test name="FastBite.Tests.FastBiteTests.confirmorder" type="FastBite.Tests.FastBiteTests" method="confirmorder" time="1.1890480" result="Fail">
+        <failure>
+          <message>Assert.Equal() Failure
+Expected: 2
+Actual:   0</message>
+          <stack-trace>   at FastBite.Tests.FastBiteTests.confirmorder() in /projects/challenge/FastBite.Tests/FastBiteTests.cs:line 442</stack-trace>
+        </failure>
+        <traits />
+      </test>
+    </collection>
+  </assembly>
+</assemblies>
