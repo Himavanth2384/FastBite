@@ -520,3 +520,4 @@
 /projects/challenge/FastBite/obj/Debug/netcoreapp3.1/FastBite.dll
 /projects/challenge/FastBite/obj/Debug/netcoreapp3.1/FastBite.pdb
 /projects/challenge/FastBite/obj/Debug/netcoreapp3.1/FastBite.genruntimeconfig.cache
+/projects/challenge/FastBite/obj/Debug/netcoreapp3.1/Razor/Areas/Admin/Views/User/NewEmployeeRegistration.cshtml.g.cs
