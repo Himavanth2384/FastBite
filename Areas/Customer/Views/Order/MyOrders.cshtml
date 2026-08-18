@@ -5,9 +5,46 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 
 }
-
-
-<div class =" row">
- 
+<br/>
+<div class="row">
+    @{ var orderNumber = 0; }
+    @foreach (var ovm in Model)
+    {
+        orderNumber++;
+        var statusClass = "text-primary";
+        if (ovm.cart.orderStatus == StaticDefinitions.OrderCancelled)
+        {
+            statusClass = "text-danger";
+        }
+        else if (ovm.cart.orderStatus == StaticDefinitions.OrderConfirmed || ovm.cart.orderStatus == StaticDefinitions.orderReady)
+        {
+            statusClass = "text-success";
+        }
+        <div class="col-4 mb-4">
+            <div class="card">
+                <div class="card-header bg-danger text-white">#Order@(orderNumber)</div>
+                <div class="card-body">
+                    <h5 class="text-success">@(ovm.Restaurant != null ? ovm.Restaurant.RestaurantName : "")</h5>
+                    <p>Total-₹@ovm.cart.OrderTotal</p>
+                    @foreach (var od in ovm.OrderDetailsList)
+                    {
+                        <div class="row">
+                            <div class="col-8">@od.Name <br/> Quantity: @od.Count</div>
+                            <div class="col-4 text-right">₹@(od.MenuItem.price * od.Count)</div>
+                        </div>
+                    }
+                    <div class="row">
+                        <div class="col-8">Discount</div>
+                        <div class="col-4 text-right">₹@ovm.cart.discount</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-8">Total</div>
+                        <div class="col-4 text-right">@ovm.cart.OrderTotal</div>
+                    </div>
+                    <p class="@statusClass mt-2"><strong>@ovm.cart.orderStatus</strong></p>
+                </div>
+            </div>
+        </div>
+    }
 </div>
-  
+

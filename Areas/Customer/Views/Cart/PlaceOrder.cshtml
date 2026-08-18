@@ -5,3 +5,81 @@
      Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <br/>
+<div class="row">
+    <div class="col-6">
+        <form asp-action="PlaceOrder" method="post">
+            <h4 class="text-info">User Details</h4>
+            <div class="form-group row">
+                <div class="col-2">
+                    <label class="col-form-label">Name</label>
+                </div>
+                <div class="col-6">
+                    <input asp-for="Cart.name" id="Cart_Name" class="form-control" />
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-2">
+                    <label class="col-form-label">PhoneNumber</label>
+                </div>
+                <div class="col-6">
+                    <input asp-for="Cart.mobilenumber" id="Cart_PhoneNumber" class="form-control" />
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-2">
+                    <label class="col-form-label">Address</label>
+                </div>
+                <div class="col-6">
+                    <input asp-for="Cart.Address" id="address" class="form-control" />
+                </div>
+            </div>
+            <button type="submit" class="btn btn-success btn-block">PlaceOrder</button>
+        </form>
+    </div>
+    <div class="col-6">
+        <h4>Cart Items <span class="badge badge-secondary">@Model.CartItemList.Count</span>
+            <a asp-controller="Home" asp-action="Index" class="btn btn-success float-right">AddMore</a>
+        </h4>
+        <div class="list-group">
+            @foreach (var ci in Model.CartItemList)
+            {
+                <div class="list-group-item">
+                    <div class="row align-items-center">
+                        <div class="col-4">@ci.MenuItem.Name</div>
+                        <div class="col-3">₹@ci.MenuItem.price x@ci.Count</div>
+                        <div class="col-4">
+                            <form asp-action="IncrementCartItem" asp-route-id="@ci.Id" method="post" style="display:inline">
+                                <button type="submit" id="Add" class="btn btn-primary btn-sm">+</button>
+                            </form>
+                            <form asp-action="DecrementCartItem" asp-route-id="@ci.Id" method="post" style="display:inline">
+                                <button type="submit" id="minus" class="btn btn-danger btn-sm">-</button>
+                            </form>
+                            <form asp-action="RemoveCartItem" asp-route-id="@ci.Id" method="post" style="display:inline">
+                                <button type="submit" class="btn btn-outline-secondary btn-sm">X</button>
+                            </form>
+                        </div>
+                        <div class="col-1">₹@(ci.MenuItem.price * ci.Count)</div>
+                    </div>
+                </div>
+            }
+            <div class="list-group-item">
+                <div class="row">
+                    <div class="col-6">Offer code</div>
+                    <div class="col-6 text-right">₹@Model.Cart.discount</div>
+                </div>
+            </div>
+            <div class="list-group-item">
+                <div class="row">
+                    <div class="col-6">Total</div>
+                    <div class="col-6 text-right">@Model.Cart.OrderTotal</div>
+                </div>
+            </div>
+        </div>
+        <form asp-action="ApplyOffer" method="post" class="input-group">
+            <input type="text" id="offercode" name="offercode" class="form-control" value="@Model.Cart.offercode" placeholder="Offer code" />
+            <div class="input-group-append">
+                <button type="submit" class="btn btn-secondary">Apply</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace FastBite.Data
 {
-    public class ApplicationDbContext : IdentityDbContext
+    public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
         {
@@ -19,7 +19,6 @@ namespace FastBite.Data
         }
          public DbSet<Category> Category{get;set;}
         public DbSet<SubCategory> SubCategory{get;set;}
-         public DbSet<ApplicationUser> ApplicationUser{get;set;}
          public DbSet<Restaurant> Restaurant{get;set;}
          public DbSet<MenuItem> MenuItem{get;set;}
 

@@ -7,3 +7,35 @@
 <br/>
 <h2 class="text-info">Create</h2>
 <br/>
+<form asp-action="Create" enctype="multipart/form-data">
+    <div class="border backgroundwhite">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="RestaurantName" class="col-form-label"></label>
+            </div>
+            <div class="col-5">
+                <input asp-for="RestaurantName" id="RestaurantName" class="form-control" />
+            </div>
+            <span asp-validation-for="RestaurantName" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="Address" class="col-form-label"></label>
+            </div>
+            <div class="col-5">
+                <input asp-for="Address" id="Address" class="form-control" />
+            </div>
+            <span asp-validation-for="Address" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-2">
+                <label>imageurl</label>
+            </div>
+            <div class="col-5">
+                <input type="file" id="imageurl" name="imageurl" class="form-control-file" />
+            </div>
+        </div>
+        <partial name="createButtonAndBacktolist" />
+    </div>
+</form>

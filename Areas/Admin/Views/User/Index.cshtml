@@ -1,12 +1,37 @@
 @model IEnumerable<ApplicationUser>
+@using Microsoft.AspNetCore.Identity
+@inject UserManager<ApplicationUser> UserManager
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-
- 
- 
-
-
-
+<br/>
+<h2 class="text-info">Users List</h2>
+<br/>
+<p><a asp-action="NewEmployeeRegistration" class="btn btn-info">New EmployeeRegistration</a></p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>PhoneNumber</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            var isLocked = UserManager.IsLockedOutAsync(item).Result;
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Email</td>
+                <td>@item.PhoneNumber</td>
+                <td>
+                    <form asp-action="ToggleLock" asp-route-id="@item.Id" method="post" style="display:inline">
+                        <button type="submit" class="btn btn-success">@(isLocked ? "Unlock" : "Lock")</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

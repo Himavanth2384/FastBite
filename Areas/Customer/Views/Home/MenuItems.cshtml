@@ -1,3 +1,55 @@
 @model FastBite.Models.ViewModel.CategoryAndMenuItemViewModel
-
+@using System.Linq
+@{
+    ViewData["Title"] = "MenuItems";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
 <br/>
+<h2 class="text-info">@Model.Restaurant.RestaurantName</h2>
+<br/>
+<div class="btn-group" role="group">
+    <button type="button" class="btn btn-dark" onclick="filterMenu('all')">SHOWALL</button>
+    @foreach (var cat in Model.Category)
+    {
+        <button type="button" class="btn btn-outline-dark" onclick="filterMenu('@cat.Id')">@cat.Name.ToUpper()</button>
+    }
+</div>
+<br/><br/>
+@foreach (var cat in Model.Category)
+{
+    <div class="menu-category-group" data-category="@cat.Id">
+        <h4>@cat.Name</h4>
+        @foreach (var item in Model.MenuItem.Where(m => m.CategoryId == cat.Id))
+        {
+            <div class="row align-items-center border-bottom py-2">
+                <div class="col-2">
+                    <img src="@item.imageUrl" width="80" />
+                </div>
+                <div class="col-6">
+                    <h5>@item.Name</h5>
+                </div>
+                <div class="col-2">
+                    ₹@item.price
+                </div>
+                <div class="col-2">
+                    <a asp-controller="CartItem" asp-action="AddTocart" asp-route-id="@item.Id" class="btn btn-success">Add to Cart</a>
+                </div>
+            </div>
+        }
+    </div>
+}
+
+@section Scripts {
+    <script>
+        function filterMenu(catId) {
+            var groups = document.querySelectorAll(".menu-category-group");
+            groups.forEach(function (g) {
+                if (catId === 'all' || g.getAttribute('data-category') === catId) {
+                    g.style.display = '';
+                } else {
+                    g.style.display = 'none';
+                }
+            });
+        }
+    </script>
+}

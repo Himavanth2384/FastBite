@@ -5,3 +5,44 @@
      Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <br/>
+<h2 class="text-info">Edit Restaurant</h2>
+<br/>
+<form asp-action="Edit" asp-route-id="@Model.Id" enctype="multipart/form-data">
+    <div class="border backgroundwhite">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="row">
+            <div class="col-8">
+                <div class="form-group row">
+                    <div class="col-3">
+                        <label asp-for="RestaurantName" class="col-form-label"></label>
+                    </div>
+                    <div class="col-6">
+                        <input asp-for="RestaurantName" id="RestaurantName" class="form-control" />
+                    </div>
+                    <span asp-validation-for="RestaurantName" class="text-danger"></span>
+                </div>
+                <div class="form-group row">
+                    <div class="col-3">
+                        <label asp-for="Address" class="col-form-label"></label>
+                    </div>
+                    <div class="col-6">
+                        <input asp-for="Address" id="Address" class="form-control" />
+                    </div>
+                    <span asp-validation-for="Address" class="text-danger"></span>
+                </div>
+                <div class="form-group row">
+                    <div class="col-3">
+                        <label>imageurl</label>
+                    </div>
+                    <div class="col-6">
+                        <input type="file" id="imageurl" name="imageurl" class="form-control-file" />
+                    </div>
+                </div>
+            </div>
+            <div class="col-4">
+                <img src="@Model.imageurl" style="max-width:150px" />
+            </div>
+        </div>
+        <partial name="_EditAndBackPartialView" model="Model.Id" />
+    </div>
+</form>

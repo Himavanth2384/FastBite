@@ -3,3 +3,33 @@
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<br/>
+<h2 class="text-info">Restaurant List</h2>
+<br/>
+<partial name="createButtonPartial" />
+<table class="table">
+    <thead>
+        <tr>
+            <th>RestaurantName</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.RestaurantName</td>
+                <td style="width:400px">
+                    <div class="btn-group" role="group">
+                        <a class="btn btn-primary text-white" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+                        <form asp-action="Delete" asp-route-id="@item.Id" method="post" style="display:inline">
+                            <button type="submit" class="btn btn-danger text-white">Delete</button>
+                        </form>
+                        <a class="btn btn-success text-white" asp-controller="MenuItem" asp-action="Index" asp-route-id="@item.Id">MenuItems</a>
+                        <a class="btn btn-info text-white" asp-area="Customer" asp-controller="Order" asp-action="PendingRestaurantOrderDetails" asp-route-restid="@item.Id">Orders</a>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

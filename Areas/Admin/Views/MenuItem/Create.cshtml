@@ -4,3 +4,88 @@
     ViewData["Title"] = "Create";
      Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<br/>
+<h2 class="text-info">Create</h2>
+<br/>
+<form asp-action="Create" enctype="multipart/form-data">
+    <input type="hidden" asp-for="MenuItem.RestaurantId" />
+    <div class="border backgroundwhite">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="MenuItem.Name" class="col-form-label">Name</label>
+            </div>
+            <div class="col-5">
+                <input asp-for="MenuItem.Name" id="MenuItem_Name" class="form-control" />
+            </div>
+            <span asp-validation-for="MenuItem.Name" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="MenuItem.description" class="col-form-label">description</label>
+            </div>
+            <div class="col-5">
+                <input asp-for="MenuItem.description" id="MenuItem_description" class="form-control" />
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="MenuItem.price" class="col-form-label">price</label>
+            </div>
+            <div class="col-5">
+                <input asp-for="MenuItem.price" id="MenuItem_price" class="form-control" value="0" />
+            </div>
+            <span asp-validation-for="MenuItem.price" class="text-danger"></span>
+        </div>
+        <div class="form-group row">
+            <div class="col-2">
+                <label>imageUri</label>
+            </div>
+            <div class="col-5">
+                <input type="file" id="MenuItem_image" name="MenuItem_image" class="form-control-file" />
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="MenuItem.CategoryId" class="col-form-label">CategoryId</label>
+            </div>
+            <div class="col-5">
+                <select asp-for="MenuItem.CategoryId" asp-items="Model.Category.ToSelectListItem(0)" id="categoryId" class="form-control"></select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="MenuItem.SubCategoryId" class="col-form-label">SubCategoryId</label>
+            </div>
+            <div class="col-5">
+                <select asp-for="MenuItem.SubCategoryId" asp-items="Model.SubCategory.ToSelectListItem(0)" id="SubCategoryID" class="form-control"></select>
+            </div>
+        </div>
+        <partial name="createButtonAndBacktolist" />
+    </div>
+</form>
+
+@section Scripts {
+    <script>
+        var subcats = [
+        @foreach (var s in Model.SubCategory)
+        {
+            @:{ id: @s.Id, catId: @s.CategoryId, name: "@s.Name" },
+        }
+        ];
+        var allOptionsHtml = document.getElementById("SubCategoryID").innerHTML;
+        function filterSubCategories() {
+            var catId = parseInt(document.getElementById("categoryId").value, 10);
+            var select = document.getElementById("SubCategoryID");
+            select.innerHTML = "";
+            subcats.filter(function (s) { return s.catId === catId; }).forEach(function (s) {
+                var opt = document.createElement("option");
+                opt.value = s.id;
+                opt.text = s.name;
+                select.appendChild(opt);
+            });
+        }
+        document.getElementById("categoryId").addEventListener("change", filterSubCategories);
+        filterSubCategories();
+    </script>
+}

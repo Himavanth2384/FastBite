@@ -3,3 +3,30 @@
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<br/>
+<h2 class="text-info">Offer List</h2>
+<br/>
+<partial name="createButtonPartial" />
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Discount</th>
+            <th>MinimumAmount</th>
+            <th>isActive</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Discount</td>
+                <td>@item.MinimumAmount</td>
+                <td><input type="checkbox" checked="@item.isActive" disabled /></td>
+                <partial name="_editDeletePartialView" model="item.Id" />
+            </tr>
+        }
+    </tbody>
+</table>

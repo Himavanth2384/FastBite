@@ -3,3 +3,24 @@
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<br/>
+<h2 class="text-info">Category List</h2>
+<br/>
+<partial name="createButtonPartial" />
+<table class="table">
+    <thead>
+        <tr>
+            <th>CategoryName</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <partial name="_editDeletePartialView" model="item.Id" />
+            </tr>
+        }
+    </tbody>
+</table>

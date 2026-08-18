@@ -2,7 +2,60 @@
 @using FastBite.Utility;
 
 @{
-    ViewData["Title"] = "MyOrders";
+    ViewData["Title"] = "PendingRestaurantOrderDetails";
     Layout = "~/Views/Shared/_Layout.cshtml";
 
 }
+<br/>
+<h2 class="text-info">Pending Orders of @ViewBag.RestaurantName</h2>
+<br/>
+<div class="accordion" id="ordersAccordion">
+    @{ var orderIndex = 0; }
+    @foreach (var ovm in Model)
+    {
+        orderIndex++;
+        <div class="card">
+            <div class="card-header d-flex justify-content-between align-items-center" id="heading@(orderIndex)">
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapse@(orderIndex)" aria-expanded="true" aria-controls="collapse@(orderIndex)">
+                    #Order @orderIndex
+                </button>
+                <div>
+                    @if (ovm.cart.orderStatus == StaticDefinitions.PendingConfirmation)
+                    {
+                        <form asp-action="AcceptOrder" asp-route-id="@ovm.cart.Id" asp-route-restid="@ovm.Restaurant.Id" method="post" style="display:inline">
+                            <button type="submit" class="btn btn-primary">Accept Order</button>
+                        </form>
+                    }
+                    else
+                    {
+                        <form asp-action="OrderPrepared" asp-route-id="@ovm.cart.Id" asp-route-restid="@ovm.Restaurant.Id" method="post" style="display:inline">
+                            <button type="submit" class="btn btn-primary">Order Prepared</button>
+                        </form>
+                    }
+                    <form asp-action="CancelOrder" asp-route-id="@ovm.cart.Id" asp-route-restid="@ovm.Restaurant.Id" method="post" style="display:inline">
+                        <button type="submit" class="btn btn-danger">Cancel Order</button>
+                    </form>
+                </div>
+            </div>
+            <div id="collapse@(orderIndex)" class="collapse" aria-labelledby="heading@(orderIndex)" data-parent="#ordersAccordion">
+                <div class="card-body">
+                    @foreach (var od in ovm.OrderDetailsList)
+                    {
+                        <div class="row">
+                            <div class="col-8">@od.Name <br/> Quantity: @od.Count</div>
+                            <div class="col-4 text-right">₹@(od.MenuItem.price * od.Count)</div>
+                        </div>
+                    }
+                    <div class="row">
+                        <div class="col-8">Discount</div>
+                        <div class="col-4 text-right">₹@ovm.cart.discount</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-8">Total</div>
+                        <div class="col-4 text-right">@ovm.cart.OrderTotal</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>

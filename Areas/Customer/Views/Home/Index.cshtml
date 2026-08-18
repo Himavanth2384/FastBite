@@ -1,1 +1,16 @@
-
+@model IEnumerable<Restaurant>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<br/>
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-3 text-center">
+            <img src="@item.imageurl" class="img-fluid" style="max-width:150px" />
+            <h5>@item.RestaurantName</h5>
+            <a asp-action="MenuItems" asp-route-id="@item.Id" class="btn btn-success">order Now</a>
+        </div>
+    }
+</div>

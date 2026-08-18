@@ -4,3 +4,36 @@
     ViewData["Title"] = "ConfirmOrder";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<br/>
+<div class="row">
+    <div class="col-6">
+        <h4 class="text-primary">@Model.cart.orderStatus</h4>
+        <a asp-area="Customer" asp-controller="Home" asp-action="Index" class="btn btn-success">ContinueShopping</a>
+    </div>
+    <div class="col-6">
+        <h4>Your Order</h4>
+        <div class="list-group">
+            @foreach (var od in Model.OrderDetailsList)
+            {
+                <div class="list-group-item">
+                    <div class="row">
+                        <div class="col-8">@od.Name <br/> Quantity: @od.Count</div>
+                        <div class="col-4 text-right">₹@(od.MenuItem.price * od.Count)</div>
+                    </div>
+                </div>
+            }
+            <div class="list-group-item">
+                <div class="row">
+                    <div class="col-8">Discount</div>
+                    <div class="col-4 text-right">₹@Model.cart.discount</div>
+                </div>
+            </div>
+            <div class="list-group-item">
+                <div class="row">
+                    <div class="col-8">Total</div>
+                    <div class="col-4 text-right">@Model.cart.OrderTotal</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

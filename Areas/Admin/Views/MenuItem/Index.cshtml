@@ -3,3 +3,30 @@
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<br/>
+<h2 class="text-info">@Model.Restaurant.RestaurantName</h2>
+<br/>
+<p><a asp-action="Create" asp-route-id="@Model.Restaurant.Id" class="btn btn-info">Create New</a></p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>price</th>
+            <th>CategoryId</th>
+            <th>SubCategoryId</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.MenuItemList)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.price</td>
+                <td>@item.Category.Name</td>
+                <td>@item.SubCategory.Name</td>
+                <partial name="_editDeletePartialView" model="item.Id" />
+            </tr>
+        }
+    </tbody>
+</table>

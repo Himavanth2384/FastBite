@@ -4,6 +4,19 @@
      Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <br/>
-<h2 class="text-info">Delete SubCategory</h2>
+<h2 class="text-info">Delete Category</h2>
 <br/>
+<form asp-action="Delete" asp-route-id="@Model.Id">
+    <div class="border backgroundwhite">
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="Name" class="col-form-label">SubCategoryName</label>
+            </div>
+            <div class="col-5">
+                <input asp-for="Name" id="Name" class="form-control" readonly="readonly" />
+            </div>
+        </div>
+        <partial name="_deleteAndBackPartialView" model="Model.Id" />
+    </div>
+</form>
 

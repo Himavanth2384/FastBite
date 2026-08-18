@@ -33,7 +33,7 @@ namespace FastBite
             // services.AddDbContext<ApplicationDbContext>(options =>  
             //     options.UseSqlServer(
             //         Configuration.GetConnectionString("DefaultConnection")));
-            services.AddIdentity<IdentityUser,IdentityRole>()
+            services.AddIdentity<FastBite.Models.ApplicationUser,IdentityRole>()
             .AddDefaultTokenProviders()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();

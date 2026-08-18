@@ -6,4 +6,52 @@
 <br/>
 <h2 class="text-info">Delete Coupon</h2>
 <br/>
+<form asp-action="Delete" asp-route-id="@Model.Id">
+    <div class="border backgroundwhite">
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="Name" class="col-form-label"></label>
+            </div>
+            <div class="col-5">
+                <input asp-for="Name" id="Name" class="form-control" readonly="readonly" />
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="CouponType" class="col-form-label"></label>
+            </div>
+            <div class="col-5">
+                <select asp-for="CouponType" id="CouponType" class="form-control" disabled>
+                    <option value="0">Percent</option>
+                    <option value="1">Rupee</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="Discount" class="col-form-label"></label>
+            </div>
+            <div class="col-5">
+                <input asp-for="Discount" id="Discount" class="form-control" readonly="readonly" />
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="MinimumAmount" class="col-form-label"></label>
+            </div>
+            <div class="col-5">
+                <input asp-for="MinimumAmount" id="MinimumAmount" class="form-control" readonly="readonly" />
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-2">
+                <label asp-for="isActive" class="col-form-label"></label>
+            </div>
+            <div class="col-5">
+                <input asp-for="isActive" id="isActive" type="checkbox" disabled />
+            </div>
+        </div>
+        <partial name="_deleteAndBackPartialView" model="Model.Id" />
+    </div>
+</form>
 

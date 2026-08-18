@@ -1,6 +1,11 @@
 @using FastBite.Utility
+@using FastBite.Models
+@using System.Linq
 @using Microsoft.AspNetCore.Http;
+@using Microsoft.AspNetCore.Identity
 @inject IHttpContextAccessor HttpContextAccessor;
+@inject FastBite.Data.ApplicationDbContext _layoutDb
+@inject UserManager<ApplicationUser> _layoutUserManager
 
 <!DOCTYPE html>
 <html lang="en">
@@ -17,7 +22,7 @@
     <header>
          <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark border-bottom box-shadow mb-3" style="    background-color: #e83734;">
             <div class="container">
-                <a class="navbar-brand" asp-area="" style="color: white;font-size: 24px" asp-controller="Home" asp-action="Index">FastBite</a>
+                <a class="navbar-brand" asp-area="Customer" style="color: white;font-size: 24px" asp-controller="Home" asp-action="Index">FastBite</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -25,8 +30,39 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <partial name="_LoginPartial" />
                     <ul class="navbar-nav flex-grow-1">
-  
-                        
+@if (User.Identity.IsAuthenticated)
+{
+    var cartCount = 0;
+    var uid = _layoutUserManager.GetUserId(User);
+    if (uid != null)
+    {
+        cartCount = _layoutDb.CartItem.Count(c => c.ApplicationUserId == uid);
+    }
+    if (User.IsInRole(StaticDefinitions.Admin))
+    {
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" style="color:white" href="#" id="appManagementDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">AppManagement</a>
+            <div class="dropdown-menu" aria-labelledby="appManagementDropdown">
+                <a class="dropdown-item" asp-area="Admin" asp-controller="Category" asp-action="Index">Category</a>
+                <a class="dropdown-item" asp-area="Admin" asp-controller="SubCategory" asp-action="Index">SubCategory</a>
+                <a class="dropdown-item" asp-area="Admin" asp-controller="User" asp-action="Index">Users</a>
+                <a class="dropdown-item" asp-area="Admin" asp-controller="Offer" asp-action="Index">Coupon</a>
+            </div>
+        </li>
+    }
+    if (User.IsInRole(StaticDefinitions.RestaurantOwner))
+    {
+        <li class="nav-item">
+            <a class="nav-link" style="color:white" asp-area="Admin" asp-controller="Restaurant" asp-action="Index">Restaurants</a>
+        </li>
+    }
+    <li class="nav-item">
+        <a class="nav-link" style="color:white" asp-area="Customer" asp-controller="Order" asp-action="MyOrders">OrderHistory</a>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" style="color:white" asp-area="Customer" asp-controller="Cart" asp-action="PlaceOrder">Cart(@cartCount)</a>
+    </li>
+}
                     </ul>
                 </div>
             </div>
