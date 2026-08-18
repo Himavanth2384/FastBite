@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore.Storage;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace FastBite.Areas.Admin.Controllers
 {
@@ -18,21 +19,25 @@ namespace FastBite.Areas.Admin.Controllers
       //  SqlConnection connection = new SqlConnection("Server=(LocalDB)\\MSSQLLocalDB;Database=FastBite;Trusted_Connection=True;MultipleActiveResultSets=true");
 
          public readonly ApplicationDbContext _db;
-         public readonly RoleManager<IdentityRole> _roleManager;
+         public readonly IServiceProvider _serviceProvider;
        //  public IDbContextTransaction _transaction;
 
 
 
-         public DatabaseController( ApplicationDbContext db, RoleManager<IdentityRole> roleManager){
+         public DatabaseController( ApplicationDbContext db, IServiceProvider serviceProvider){
              _db=db;
-             _roleManager=roleManager;
+             _serviceProvider=serviceProvider;
             // _transaction=transaction;
          }
          public void deleteContext(){
            _db.Database.EnsureDeleted();
 
            Console.WriteLine("hello");
-           IdentitySeeder.SeedRolesAsync(_roleManager).GetAwaiter().GetResult();
+           using (var scope = _serviceProvider.CreateScope())
+           {
+               var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+               IdentitySeeder.SeedRolesAsync(roleManager).GetAwaiter().GetResult();
+           }
            DirectoryInfo di = new DirectoryInfo("./wwwroot/images/restaurant");
 if(di.Exists && di.GetFiles().Count()>0){
 

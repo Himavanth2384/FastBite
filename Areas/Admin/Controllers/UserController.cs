@@ -102,11 +102,17 @@ namespace FastBite.Areas.Admin.Controllers
                     {
                         roleName = StaticDefinitions.Customer;
                     }
-                    if (!await _roleManager.RoleExistsAsync(roleName))
+                    try
                     {
-                        await _roleManager.CreateAsync(new IdentityRole(roleName));
+                        if (!await _roleManager.RoleExistsAsync(roleName))
+                        {
+                            await _roleManager.CreateAsync(new IdentityRole(roleName));
+                        }
+                        await _userManager.AddToRoleAsync(user, roleName);
                     }
-                    await _userManager.AddToRoleAsync(user, roleName);
+                    catch (Exception)
+                    {
+                    }
                     return RedirectToAction("Index");
                 }
                 foreach (var error in result.Errors)
